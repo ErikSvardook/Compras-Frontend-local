@@ -3,9 +3,18 @@
   <form class="login-card" (ngSubmit)="submit()">
     <h2>Iniciar sesión</h2>
 
+    <!--Credenciales de prueba-->
+    <div class="test-credentials">
+      <p><strong>Correo de prueba:</strong> soportetiav@gmail.com</p>
+      <p><strong>Contraseña de prueba:</strong> 12345678</p>
+    </div>
+
     <!--[(ngModel)]: -->
     <input type="text" name="email" placeholder="Correo electronico" [(ngModel)]="email"/>
     <input type="password" name="password" placeholder="Contraseña" [(ngModel)]="password"/>
+
+    <!--Aviso para usar correo propio-->
+    <p class="mail-note">Para que el correo te llegue a tu bandeja debes agregar un usuario con un correo propio</p>
 
     <div class="forgot-container">
       <a routerLink="/forgot-password">
