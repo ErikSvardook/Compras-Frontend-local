@@ -55,9 +55,9 @@ export interface SaleHistory {
   // estado nuevo el frontend mostraría algo equivocado sin avisar.
   //
   // Los 3 estados válidos y qué botón habilita cada uno:
-  //   confirmed=false, cancelled=false -> abierta: se puede confirmar o anular
-  //   confirmed=true                    -> congelada: ningún botón
-  //   cancelled=true                    -> anulada: el stock ya volvió
+  //   confirmed=false, cancelled=false : abierta: se puede confirmar o anular
+  //   confirmed=true                    : congelada: ningún botón
+  //   cancelled=true                    : anulada: el stock ya volvió
   confirmed: boolean;
   confirmedAt: string | null;
   cancelled: boolean;

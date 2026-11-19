@@ -267,7 +267,7 @@ export class Usuarios implements OnInit {
     // Fuera de modo edicion: despues de crear/actualizar el formulario vuelve
     // a "crear" y el boton Cancelar desaparece.
     this.editingUserId = null;
-    // 🔑 Se limpian los errores al resetear, no solo los valores: si no, el
+    // Se limpian los errores al resetear, no solo los valores: si no, el
     // mensaje "La contraseña es obligatoria" de un intento fallido seguiría
     // debajo del campo aunque el usuario ya esté escribiendo.
     this.errores = {};
@@ -280,7 +280,7 @@ export class Usuarios implements OnInit {
   }
 
   editUser(user: User){
-    // Marca el usuario en edicion → el template muestra el boton Cancelar.
+    // Marca el usuario en edicion : el template muestra el boton Cancelar.
     this.editingUserId = user.id ?? null;
 
     this.form = {

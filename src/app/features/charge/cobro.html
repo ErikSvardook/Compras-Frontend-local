@@ -400,10 +400,10 @@
                         `cash.boxForm` por debajo y se pierde lo tecleado sin aviso.
 
                         Hay dos capas y cada una cubre algo distinto:
-                        · la clase `.tabla-bloqueada` (abajo, cajas.css) pone
+                        - la clase `.tabla-bloqueada` (abajo, cajas.css) pone
                           `pointer-events: none`, que bloquea cualquier clic dentro
                           del bloque, incluidas filas que se agreguen después;
-                        · `[disabled]` en cada botón deja el control fuera del
+                        - `[disabled]` en cada botón deja el control fuera del
                           recorrido con el teclado y lo pone en gris de forma nativa.
 
                         La tabla NO se oculta a propósito: el usuario necesita ver
@@ -453,7 +453,7 @@
                                             table-layout:fixed deja de respetarse (las columnas se
                                             descuadran y los botones se salen). Por eso el <td> es
                                             una celda normal y el <div> de adentro es el flex
-                                            container — ahí sí funciona flex-wrap:wrap.
+                                            container - ahí sí funciona flex-wrap:wrap.
                                         -->
                                         <div class="boxes-actions">
                                             <!--
@@ -489,9 +489,9 @@
                                                 "Dar de baja" aparece en dos casos distintos y
                                                 por eso son DOS botones, no uno con condición
                                                 mixta:
-                                                  · tiene cortes y NO se puede borrar, solo
+                                                  - tiene cortes y NO se puede borrar, solo
                                                     dejar de ofrecerse al abrir.
-                                                  · no tiene cortes y tampoco interesa
+                                                  - no tiene cortes y tampoco interesa
                                                     borrarla a mano; el borrado ya está
                                                     disponible arriba.
                                             -->
@@ -532,10 +532,10 @@
                          Los DOS botones se inhabitilan mientras hay una caja en
                          alta/edición, por la misma razón que la tabla: cada uno
                          descarta lo escrito sin aviso.
-                           · "Crear" llama a startNewBox(), que reemplaza
-                             `boxForm` por uno nuevo → se pierde lo tecleado.
-                           · "Cerrar" llama a closeBoxesModal(), que además
-                             pone `showBoxForm = false` → se pierde el formulario
+                           - "Crear" llama a startNewBox(), que reemplaza
+                             `boxForm` por uno nuevo : se pierde lo tecleado.
+                           - "Cerrar" llama a closeBoxesModal(), que además
+                             pone `showBoxForm = false` : se pierde el formulario
                              entero.
                          Quedan dos salidas, y ambas son explícitas: el botón
                          "Cancelar" del formulario y guardar. Así el usuario no

@@ -10,7 +10,7 @@ describe('ForgotPassword', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ForgotPassword],
-      //RouterLink del template requiere ActivatedRoute → proporcionamos un router real.
+      //RouterLink del template requiere ActivatedRoute : proporcionamos un router real.
       providers: [provideRouter([])],
     }).compileComponents();
 

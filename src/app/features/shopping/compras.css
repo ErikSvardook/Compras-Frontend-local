@@ -31,7 +31,7 @@
    del ancho de su contenido (necesario dentro del grid de proveedores).
    IMPORTANTE: esta regla faltaba en compras; sin ella el contenedor era un
    <div> normal, la tarjeta crecia con el contenido y .content (overflow:hidden)
-   la recortaba -> en Margenes no se veian las filas ni el pie de paginacion. */
+   la recortaba : en Margenes no se veian las filas ni el pie de paginacion. */
 .table-container {
   width: 100%;
   min-width: 0;
@@ -287,7 +287,7 @@
   background: #0f172a;
 }
 
-/* El icono del date picker nativo es oscuro → lo invertimos para el tema oscuro */
+/* El icono del date picker nativo es oscuro : lo invertimos para el tema oscuro */
 .field input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.8);
   cursor: pointer;
@@ -574,8 +574,8 @@ tr.confirmada td {
 
    LAS COLUMNAS SON LAS MISMAS QUE LAS DE .linea (--cols-renglon, definida en
    .lineas). Antes cada bloque declaraba las suyas y no coincidían:
-     .linea-cabecera → 2.2fr 0.8fr 1fr 1fr 0.9fr 0.5fr  (6 columnas)
-     .linea          → 2fr 80px 120px 90px 36px          (5 columnas)
+     .linea-cabecera : 2.2fr 0.8fr 1fr 1fr 0.9fr 0.5fr  (6 columnas)
+     .linea          : 2fr 80px 120px 90px 36px          (5 columnas)
    .linea tiene SEIS hijos (select, 3 inputs, subtotal y botón eliminar) para
    cinco columnas, así que el botón caía en una fila implícita por debajo de los
    inputs: por eso se veía "mal puesto". Y los títulos quedaban corridos

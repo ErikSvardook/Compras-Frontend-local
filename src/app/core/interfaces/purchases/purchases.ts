@@ -1,4 +1,4 @@
-//Espejo de model/dto/Purchases/*.java — nombres de campo idénticos a la respuesta JSON.
+//Espejo de model/dto/Purchases/*.java - nombres de campo idénticos a la respuesta JSON.
 
 //Proveedor (CRUD /api/providers)
 export interface ProviderDto {

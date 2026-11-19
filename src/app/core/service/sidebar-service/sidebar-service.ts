@@ -50,7 +50,7 @@ export class SidebarService implements OnDestroy {
     *
     * Ejemplo: si el usuario esta en /productos con el menu abierto y hace clic
     * en "Inicio" (que va a /cobro), se disparara NavigationStart ANTES de navegar.
-    * El servicio detecta esto y pone menuOpen = false → el sidebar empieza a contraerse
+    * El servicio detecta esto y pone menuOpen = false : el sidebar empieza a contraerse
     * mientras la nueva ruta se esta cargando.
     */
     this.routerSub = this.router.events.pipe(

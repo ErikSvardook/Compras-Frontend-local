@@ -1,5 +1,5 @@
 /* =========================================================================
-   MODAL "VER CAJAS" — CRUD del inventario de cajas
+   MODAL "VER CAJAS" - CRUD del inventario de cajas
    ========================================================================= */
 
 /*
@@ -146,26 +146,26 @@
    "de corrección" más abajo no hace nada (solo confunde al que lea). */
 .boxes-table th.caja-col,
 .boxes-table td.caja-col {
-    /* 30% — el nombre de la caja + su descripción. */
+    /* 30% - el nombre de la caja + su descripción. */
     width: 30%;
 }
 
 .boxes-table th.turnos-col,
 .boxes-table td.turnos-col {
-    /* 12% — es un contador: la cifra máxima es 3 dígitos ("Turnos" ~45px). */
+    /* 12% - es un contador: la cifra máxima es 3 dígitos ("Turnos" ~45px). */
     width: 12%;
 }
 
 .boxes-table th.fecha-col,
 .boxes-table td.fecha-col {
-    /* 24% — "04/10/2026 14:30" son ~112px; no la partes para que la fila no se
+    /* 24% - "04/10/2026 14:30" son ~112px; no la partes para que la fila no se
        haga el doble de alta. */
     width: 24%;
 }
 
 .boxes-table th.acciones-col,
 .boxes-table td.acciones-col {
-    /* 34% — la más ancha a propósito. Solo se muestran 2 o 3 botones a la vez
+    /* 34% - la más ancha a propósito. Solo se muestran 2 o 3 botones a la vez
        ("Eliminar" y "Dar de baja" son mutuamente excluyentes), pero el ancho
        se calcula para los 3: ~157px de botones + 12px de gaps entran en los
        ~191px que deja este 34%. Si no entran, flex-wrap los baja de línea
@@ -310,7 +310,7 @@
   `cobro.css` define `.btn-inc, .btn-dec, .btn-del` para los botones de icono
   del CARRITO (30x30, `padding: 0`, con un <img> dentro). Si aquí se llamaran
   también `.btn-del`, las dos reglasrikearían por la misma clase, en el MISMO
-  componente y con la MISMA especificidad (0,1,0) — gana la última, y cajas.css
+  componente y con la MISMA especificidad (0,1,0) - gana la última, y cajas.css
   carga después. El botón "X" del carrito heredaría `padding: 5px 10px` y el
   icono de 16px se quedaría sin sitio dentro de los 30px.
 
@@ -401,20 +401,20 @@
    Antes había al final de este archivo tres reglas "de corrección":
        .boxes-table th.acciones-col, .boxes-table td.boxes-actions { width/min/max: 200-220px }
        .boxes-table td.boxes-actions { overflow: hidden }
-       .boxes-table { table-layout: fixed }      ← 2ª definición de la misma clase
+       .boxes-table { table-layout: fixed }      : 2ª definición de la misma clase
 
    Las tres son contraproducentes y ahora viven en su sitio correcto, arriba:
 
-   · `width: 200px` + `min-width`/`max-width`: con table-layout:fixed el
+   - `width: 200px` + `min-width`/`max-width`: con table-layout:fixed el
      navegador IGNORA min-width y max-width de las celdas, y el ancho fijo en
      píxeles competía con los porcentajes de las otras 3 columnas. Ahora la
      columna se define en % (34%) junto a las demás.
 
-   · `overflow: hidden` en la celda: además de inútil (no hay nada que recortar),
+   - `overflow: hidden` en la celda: además de inútil (no hay nada que recortar),
      es lo que ESCONDÍA el botón en vez de dejar que flex-wrap lo bajara de
      línea. Recortar el desbordamiento no es "arreglar": es tapar el síntoma.
 
-   · La 2ª `.boxes-table { table-layout: fixed }`: duplicar la misma clase al
+   - La 2ª `.boxes-table { table-layout: fixed }`: duplicar la misma clase al
      final del archivo solo funcionaba por el ORDEN de carga de styleUrls. Con
      `fixed` ya declarado en la regla principal, depender del orden es
      fragile; ahora el orden de styleUrls es irrelevante para esta tabla.

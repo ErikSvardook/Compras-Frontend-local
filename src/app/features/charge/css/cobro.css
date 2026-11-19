@@ -88,7 +88,7 @@ body.modal-open{
 /* Icono de estado (greencircle.png / redCircle.png):
    - Los PNG fuente miden 512x512; sin dimensiones explícitas reventarian
      la tarjeta .cash-info y no se alinearian con el texto "Abierta/Cerrada".
-   - 16px + align-items: center (heredado de .cash-status) → el circulo
+   - 16px + align-items: center (heredado de .cash-status) : el circulo
      queda al mismo nivel del texto, como un punto indicador de semaforo. */
 .cash-status img {
   width: 16px;
@@ -361,8 +361,8 @@ body.modal-open{
 }
 
 /* BUSCADOR - tarjeta de busqueda (mismo estilo visual que .cash-info):
-   - position:relative -> ancla el dropdown que vive dentro (posicion absoluta).
-   - flex:1 -> la tarjeta ocupa todo el ancho restante del .top-bar (la tarjeta
+   - position:relative : ancla el dropdown que vive dentro (posicion absoluta).
+   - flex:1 : la tarjeta ocupa todo el ancho restante del .top-bar (la tarjeta
      de caja .cash-info tiene ancho fijo 320px al lado).
    - Fondo/borde/radio/padding/sombra identicos a .cash-info para que ambas
      tarjetas se vean como un solo conjunto. */
@@ -392,7 +392,7 @@ body.modal-open{
   /* FIX desbordamiento:
      Por defecto los <input> usan box-sizing: content-box, asi que
      "width:100% + padding 15px" media 100% + extra y se salia de la tarjeta.
-     Con border-box, el width ya INCLUYE padding y borde → entra perfecto. */
+     Con border-box, el width ya INCLUYE padding y borde : entra perfecto. */
   box-sizing: border-box;
   padding: 12px 15px;
   border-radius: 10px;
@@ -518,7 +518,7 @@ tbody tr:hover {
 /* Botones de icono del carrito (botones +, -, eliminar):
    - Boton cuadrado 30x30 con display:inline-flex para centrar el icono.
    - El CSS anterior usaba :nth-child(1/2/3); ahora cada boton tiene su clase
-     (btn-inc/btn-dec/btn-del) → el color no depende del orden en el DOM. */
+     (btn-inc/btn-dec/btn-del) : el color no depende del orden en el DOM. */
 .btn-inc,
 .btn-dec,
 .btn-del {
@@ -537,7 +537,7 @@ tbody tr:hover {
 }
 
 /* Imagen dentro del boton:
-   - Los PNG de assets/icons miden 512x512 -> dimensiones fijas de 16px.
+   - Los PNG de assets/icons miden 512x512 : dimensiones fijas de 16px.
    - object-fit: contain respeta la proporcion de la imagen.
    - pointer-events:none hace que el clic llegue siempre al <button>.
    - filter: brightness(0) invert(1) pinta el icono de blanco (mismo truco del

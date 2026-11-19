@@ -50,7 +50,7 @@ interface LineaCompra {
 })
 
 //Módulo de compras: Compras (registro/historial), Proveedores (CRUD) y
-//Márgenes (costo real vs precio de venta) — el último solo con VER_REPORTES.
+//Márgenes (costo real vs precio de venta) - el último solo con VER_REPORTES.
 export class Compras implements OnInit {
   //Pestañas: 'compras' | 'proveedores' | 'margenes'
   activeTab: 'compras' | 'proveedores' | 'margenes' = 'compras';
@@ -218,7 +218,7 @@ export class Compras implements OnInit {
    * dos borraría el renglón equivocado al paginar.
    *
    * Si la página queda vacía, se retrocede una: si no, el pie quedaría
-   * mostrando "Mostrando 11–10 de 10" en una tabla sin filas.
+   * mostrando "Mostrando 11-10 de 10" en una tabla sin filas.
    */
   quitarLinea(index: number) {
     this.lineas.splice(index, 1);
@@ -465,7 +465,7 @@ export class Compras implements OnInit {
    * porque el backend también valida y no se quiere depender de una sola capa.
    */
   validarLinea(l: LineaCompra) {
-    //Math.trunc corta los decimales: 1.6 -> 1. No hay 1.6 de jabón.
+    //Math.trunc corta los decimales: 1.6 : 1. No hay 1.6 de jabón.
     l.quantity = Math.max(1, Math.trunc(Number(l.quantity) || 1));
     l.unitCost = Math.max(0, this.redondear2(Number(l.unitCost) || 0));
     if (l.unitPrice !== null && l.unitPrice !== undefined) {

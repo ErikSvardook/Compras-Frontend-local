@@ -17,7 +17,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
  * - Emite un OUTPUT pageChange con la pagina nueva cuando el usuario pulsa
  *   Anterior/Siguiente; el padre la guarda en su variable.
  * - Toda la matematica (totalPages, currentPage clamp, rango "Mostrando")
- *   vive en getters aqui → el template solo lee valores listos.
+ *   vive en getters aqui : el template solo lee valores listos.
  */
 @Component({
   selector: 'app-pagination',

@@ -132,8 +132,8 @@
    ==========================================================================
    El problema era que los <th> de las columnas de monto NO tenían la clase
    .money: quedaban a la izquierda mientras sus <td class="money"> iban a la
-   derecha. El resultado visual era una tabla "corrida" — el título "Total" caía
-   sobre el espacio vacío y el número en otro punto de la fila — aunque los
+   derecha. El resultado visual era una tabla "corrida" - el título "Total" caía
+   sobre el espacio vacío y el número en otro punto de la fila - aunque los
    datos estuvieran perfectamente alineados entre sí.
 
    La regla general: si una columna tiene datos alineados al centro, su

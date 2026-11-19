@@ -60,8 +60,8 @@
                     <td>{{ c.purchaseDate | date: 'dd/MM/yyyy HH:mm' }}</td>
                     <td>{{ c.providerName }}</td>
                     <td>{{ c.totalItems }}</td>
-                    <!-- class="money" → alinea a la derecha con digitos tabulares (compras.css).
-                         | number:'1.2-2' formatea a 2 decimales (ej: 1500 → 1,500.00). -->
+                    <!-- class="money" : alinea a la derecha con digitos tabulares (compras.css).
+                         | number:'1.2-2' formatea a 2 decimales (ej: 1500 : 1,500.00). -->
                     <td class="money">{{ c.total | number:'1.2-2' }}</td>
                     <td>
                       <span class="badge" [class.badge-confirmada]="c.confirmed" [class.badge-pendiente]="!c.confirmed">
@@ -126,7 +126,7 @@
                               <td>{{ item.productName }}</td>
                               <td>{{ item.quantity }}</td>
                               <td class="money">${{ item.unitCost | number:'1.2-2' }}</td>
-                              <!-- Precio de venta aplicado al confirmar. "—" cuando
+                              <!-- Precio de venta aplicado al confirmar. "-" cuando
                                    la compra no cambió el precio del producto. -->
                               <td class="money">
                                 {{ item.unitPrice !== null ? ('$' + (item.unitPrice | number:'1.2-2')) : '—' }}
@@ -409,9 +409,9 @@
     <!-- Renglones de la compra.
          Tres columnas numéricas con título explícito, porque son cosas distintas y
          confundirlas cuesta dinero:
-           Cantidad      -> cuántas unidades entran al almacén
-           Costo compra  -> lo que se le PAGA al proveedor (unit_cost)
-           Precio venta  -> a cuánto se va a VENDER (unit_price, escribe product.price
+           Cantidad      : cuántas unidades entran al almacén
+           Costo compra  : lo que se le PAGA al proveedor (unit_cost)
+           Precio venta  : a cuánto se va a VENDER (unit_price, escribe product.price
                            al confirmar; vacío = se conserva el precio actual) -->
 
     <!--

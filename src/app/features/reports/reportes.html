@@ -133,11 +133,11 @@
       Las tres tarjetas salen de UNA consulta cada una, y es importante saber de
       dónde, porque dos de ellas parecen obvias y la tercera es la que confunde.
 
-      1) INGRESOS — suma de los totales de las ventas válidas del periodo. "Válida"
+      1) INGRESOS - suma de los totales de las ventas válidas del periodo. "Válida"
          significa con pago aprobado y NO anulada. Si una venta se anuló, su
          dinero no entró y no cuenta: por eso el filtro de anuladas.
 
-      2) COSTO DE LO VENDIDO — aquí está la clave de todo el reporte. NO es el
+      2) COSTO DE LO VENDIDO - aquí está la clave de todo el reporte. NO es el
          total de las compras del periodo, porque ese dinero no se perdió: quedó
          en el almacén. Es lo que costó específicamente lo que los clientes ya se
          llevaron, y sale de multiplicar cantidad × costo unitario de cada renglón
@@ -252,7 +252,7 @@
           <!--
             Indicador de recarga. La tabla NO se borra mientras llega la respuesta
             (ver `boxLoading`): se atenúa para que se vea que algo está pasando sin
-            que el contenido salte. El `…` del texto avisa que el clic sí se
+            que el contenido salte. El `...` del texto avisa que el clic sí se
             registró.
           -->
           <span class="caja-actualizando" *ngIf="boxLoading">Actualizando…</span>
@@ -381,7 +381,7 @@
 
         <!--
           ================================================================
-            CORTE DE CAJA — total de los turnos de la tabla de arriba.
+            CORTE DE CAJA - total de los turnos de la tabla de arriba.
 
             Va AQUÍ, dentro de la misma tarjeta y debajo de la tabla, porque es
             la MISMA información a otra granularidad: la tabla es un renglón por
@@ -461,7 +461,7 @@
               La diferencia se muestra SOLO si es calculable, y si no se
               explica por qué falta. Un "$0.00" acá afirmaría "el cajero no
               sobró ni faltó nada", que es una afirmación sobre el dinero real.
-              El "—" no dice nada falso.
+              El "-" no dice nada falso.
 
               El `*ngIf` de este mismo <div> es lo que hace que `c.difference`
               esté ya angosto a `number` en las expresiones de abajo: por eso

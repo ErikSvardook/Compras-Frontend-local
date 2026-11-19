@@ -134,7 +134,7 @@
   background: #0f172a;
 }
 
-/* El icono del date picker nativo es oscuro → lo invertimos para el tema oscuro */
+/* El icono del date picker nativo es oscuro : lo invertimos para el tema oscuro */
 .table-filter-field input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.8);
   cursor: pointer;

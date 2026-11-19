@@ -111,7 +111,7 @@
                 <td>{{ u.roleName }}</td>
 
                 <!-- Fechas de alta y baja (V5).
-                     "—" cuando no hay dato, con el title explicando por qué:
+                     "-" cuando no hay dato, con el title explicando por qué:
                      las columnas se agregaron en V5 y los usuarios anteriores no las
                      tienen. -->
                 <td class="fecha">{{ u.activatedAt ? (u.activatedAt | date:'dd/MM/yyyy') : '—' }}</td>

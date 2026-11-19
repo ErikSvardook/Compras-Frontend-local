@@ -120,7 +120,7 @@ export class Reportes implements OnInit, OnDestroy, AfterViewInit {
    *
    * Existe SOLO para comparar: si el `ngModel` re-emite el mismo valor (por
    * ejemplo porque las opciones se re-renderizaron), esta guarda evita repetir
-   * la petición. Sin ella, el ciclo render → `ngModelChange` → request →
+   * la petición. Sin ella, el ciclo render : `ngModelChange` : request :
    * render deja la página colgada.
    */
   private usuarioAplicado: number | null = null;
@@ -410,7 +410,7 @@ export class Reportes implements OnInit, OnDestroy, AfterViewInit {
     if (!this.viewReady || !isPlatformBrowser(this.platformId)) return;
     this.destroyCharts();
 
-    //Tendencia (línea) — SSR-safe: solo crea Chart si el canvas existe
+    //Tendencia (línea) - SSR-safe: solo crea Chart si el canvas existe
     if (this.trendCanvas?.nativeElement) {
       this.trendChart = new Chart(this.trendCanvas.nativeElement, {
         type: 'line',
@@ -454,7 +454,7 @@ export class Reportes implements OnInit, OnDestroy, AfterViewInit {
             backgroundColor: PALETTE.slice(0, this.paymentMethods.length),
           }],
         },
-        // maintainAspectRatio:false → la dona llena el .chart-box (300px de alto)
+        // maintainAspectRatio:false : la dona llena el .chart-box (300px de alto)
         // y Chart.js la centra en el recuadro. Con el ratio por defecto el canvas
         // tomaba otras dimensiones y la grafica quedaba descuadrada.
         options: {
@@ -611,7 +611,7 @@ export class Reportes implements OnInit, OnDestroy, AfterViewInit {
       ['Tickets', `${c.totalTickets}`],
       ['Monto esperado', this.fmt(c.expectedAmount)],
       ['Utilidad', this.fmt(c.grossProfit)],
-      //"—" y no $0.00 cuando la diferencia no es calculable. Ver `CajaCorte`.
+      //"-" y no $0.00 cuando la diferencia no es calculable. Ver `CajaCorte`.
       ['Diferencia', c.difference === null ? '—' : this.fmt(c.difference)],
     ];
     autoTable(doc, { startY: 30, head: [['Concepto', 'Monto']], body: rows });

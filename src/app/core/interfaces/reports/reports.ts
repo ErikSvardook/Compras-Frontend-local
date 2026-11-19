@@ -1,6 +1,6 @@
 import { PaymentMethod } from '../../enums/paymentMethod';
 
-//Espejo de model/dto/Reports/*.java — nombres de campo idénticos a la respuesta JSON.
+//Espejo de model/dto/Reports/*.java - nombres de campo idénticos a la respuesta JSON.
 
 //Un punto de la tendencia de ventas (GET /api/reports/trend)
 export interface PeriodSalesDTO {
@@ -226,7 +226,7 @@ export interface CajaCorte {
   /**
    * Suma de las diferencias de los turnos CERRADOS.
    *
-   *`null` —y la UI muestra "—" en vez de `$0.00`— cuando:
+   *`null` -y la UI muestra "-" en vez de `$0.00`- cuando:
    *  hay filtros (mismo motivo que en la tabla: la diferencia es un dato
    *  congelado del cierre y al lado de un total filtrado daría un
    *  descuadre inventado), o todos los turnos visibles siguen abiertos, o sea que todavía no se

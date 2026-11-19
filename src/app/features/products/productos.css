@@ -134,7 +134,7 @@
 /* FIX del bug de ancho:
    Cuando el usuario SOLO tiene permiso de VER (sin formulario de crear/editar),
    el grid "350px 1fr" colocaba la tabla como unico hijo en la primera columna
-   (350px) → se contraia. Con :only-child se detecta que es el unico hijo y
+   (350px) : se contraia. Con :only-child se detecta que es el unico hijo y
    grid-column: 1 / -1 la expande a todo el ancho del grid.
    Nota: si el formulario existe, la tabla queda en la columna 1fr y ocupa el
    resto del ancho automaticamente. */

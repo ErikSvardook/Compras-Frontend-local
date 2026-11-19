@@ -10,7 +10,7 @@ describe('ResetPassword', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ResetPassword],
-      //El componente inyecta ActivatedRoute (lee ?token=) → proporcionamos un router real.
+      //El componente inyecta ActivatedRoute (lee ?token=) : proporcionamos un router real.
       providers: [provideRouter([])],
     }).compileComponents();
 

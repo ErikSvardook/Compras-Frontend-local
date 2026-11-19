@@ -1,7 +1,7 @@
 <!-- 
   USUARIOS - CRUD usuarios + roles
   sidebar.menuOpen del SidebarService (singleton).
-  [class.collapsed]="!sidebar.menuOpen" → transicion 800ms ease-in-out.
+  [class.collapsed]="!sidebar.menuOpen" : transicion 800ms ease-in-out.
   <div *ngIf="!loading" class="table-container fade-in"> anima tabla 250ms.
 -->
 <div class="layout" [class.collapsed]="!sidebar.menuOpen">
@@ -60,7 +60,7 @@
 
         <!--
           Boton cancelar: solo en modo edicion (editingUserId != null).
-          cancelEdit() = resetForm() → limpia el formulario y quita el id
+          cancelEdit() = resetForm() : limpia el formulario y quita el id
           (si se edito, password queda vacio para no mostrar la anterior).
           Mismo patron que categorias.
         -->
@@ -75,9 +75,9 @@
       </div>
 
       <!-- Estructura de tabla responsive (clases compartidas en styles.css):
-           .table-container → wrapper de layout (flex column).
-           .table-card      → tarjeta visual oscura con bordes redondeados.
-           .table-scroll    → scroll horiz/vertical en pantallas pequenas.
+           .table-container : wrapper de layout (flex column).
+           .table-card      : tarjeta visual oscura con bordes redondeados.
+           .table-scroll    : scroll horiz/vertical en pantallas pequenas.
            Si el usuario solo ve, esta div es el unico hijo del grid y el CSS
            (:only-child) la expande a todo el ancho de la pagina. -->
       <div *ngIf="!loading" class="table-container fade-in">

@@ -21,7 +21,7 @@ export class AuthService {
     return this.http.post<LoginResponse>(`${this.api}/login`, data);
   }
 
-  //Guardar el token (via helper seguro → no peta en SSR)
+  //Guardar el token (via helper seguro : no peta en SSR)
   saveToken(token: string): void{
     safeSetItem('token', token);
   }
@@ -79,13 +79,13 @@ export class AuthService {
 
     const exp = this.getTokenExpiration(token);
 
-    //Token sin claim exp → se considera valido (siempre expira en backend).
+    //Token sin claim exp : se considera valido (siempre expira en backend).
     return exp === null || exp * 1000 > Date.now();
   }
 
   //Decodifica el payload del JWT (parte del medio, base64url) y extrae "exp".
   //Es solo lectura local, sin dependencias; no valida la firma (eso lo hace
-  //el backend). Firma invalida o parse fallido -> null (no rompe nada).
+  //el backend). Firma invalida o parse fallido : null (no rompe nada).
   private getTokenExpiration(token: string): number | null{
     const parts = token.split('.');
 

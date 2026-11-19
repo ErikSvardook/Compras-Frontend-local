@@ -253,7 +253,7 @@ export class Productos implements OnInit {
 
   //Se edita el producto
   editProduct(product: ProductForm){ //Variable de la interface(se consumen sus atributos)
-    // Marca el producto en edicion → el template muestra el boton Cancelar.
+    // Marca el producto en edicion : el template muestra el boton Cancelar.
     this.editingProductId = product.id ?? null;
 
     this.form = {

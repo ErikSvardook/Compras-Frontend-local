@@ -73,7 +73,7 @@ export class Cobro implements OnInit {
   ) {
     //effect() reacciona a cambios de signals y de getters re-evaluados por
     //la detección de cambios de Angular
-    //this.cash.shoeOpenCashModal = true -> body.classList.add('modal-open')
+    //this.cash.shoeOpenCashModal = true : body.classList.add('modal-open')
 
     /**
      * ¿Por qué un effect y no un (click) o un ngOnInit?

@@ -213,8 +213,8 @@ body {
    - Mismo lenguaje visual que el pie de paginacion (pagination-bar): fondo
      #1e293b + borde separador. Va como PRIMER hijo de .table-card, asi el
      overflow:hidden de la tarjeta redondea sus esquinas superiores.
-   - align-items:flex-end -> las etiquetas quedan sobre cada select (baseline
-     abajo). flex-wrap:wrap -> en pantallas angostas los filtros se acomodan
+   - align-items:flex-end : las etiquetas quedan sobre cada select (baseline
+     abajo). flex-wrap:wrap : en pantallas angostas los filtros se acomodan
      en varias lineas en vez de desbordarse.
    - Uso en el HTML:
        <div class="table-filter-bar">
@@ -277,18 +277,18 @@ body {
   border-color: #3b82f6;
 }
 
-/* El icono del date picker nativo es oscuro → lo invertimos para el tema claro */
+/* El icono del date picker nativo es oscuro : lo invertimos para el tema claro */
 .table-filter-field input.filter-input::-webkit-calendar-picker-indicator {
   filter: invert(0.8);
   cursor: pointer;
 }
 
 /* Area desplazable:
-   - flex:1 + min-height:0 -> ocupa el alto restante de la tarjeta y permite
+   - flex:1 + min-height:0 : ocupa el alto restante de la tarjeta y permite
      scroll interno (en vez de desbordar la pagina).
-   - overflow:auto -> si la tabla es mas ancha o alta que el area, aparece
+   - overflow:auto : si la tabla es mas ancha o alta que el area, aparece
      scroll horizontal/vertical segun corresponda.
-   - -webkit-overflow-scrolling:touch → scroll con inercia en moviles. */
+   - -webkit-overflow-scrolling:touch : scroll con inercia en moviles. */
 .table-scroll {
   flex: 1;
   min-height: 0;
@@ -309,7 +309,7 @@ body {
 }
 
 /* Cabecera: fondo mas oscuro, texto en mayusculas y pequeno para contraste.
-   position:sticky + top:0 → la cabecera permanece visible al hacer scroll
+   position:sticky + top:0 : la cabecera permanece visible al hacer scroll
    vertical dentro de .table-scroll. z-index:2 la mantiene por encima de filas. */
 .table-card th {
   background: #1e293b;

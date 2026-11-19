@@ -163,7 +163,7 @@
   background: #0f172a;
 }
 
-/* El icono del date picker nativo es oscuro → lo invertimos para el tema oscuro */
+/* El icono del date picker nativo es oscuro : lo invertimos para el tema oscuro */
 .filter input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(0.8);
   cursor: pointer;
@@ -353,7 +353,7 @@
 }
 
 /* =========================================================================
-   CORTE DE CAJA — total de los turnos de la caja elegida
+   CORTE DE CAJA - total de los turnos de la caja elegida
 
    Va DEBAJO de la tabla de turnos, dentro de la misma tarjeta (`.table-card`),
    y usa las clases globales `.cash-summary` / `.cash-row` (movidas desde
@@ -391,7 +391,7 @@
   gap: 8px;
 }
 
-/* "CAJA 3 · 12 turno(s)": identifica el corte sin abrir el detalle. */
+/* "CAJA 3 - 12 turno(s)": identifica el corte sin abrir el detalle. */
 .corte-caja-sub {
   font-size: 0.78rem;
   font-weight: 400;
@@ -408,7 +408,7 @@
   font-size: 0.78rem;
 }
 
-/* Explicación de por qué un dato NO está. Sin esto el "—" parece un bug.
+/* Explicación de por qué un dato NO está. Sin esto el "-" parece un bug.
    Con un filtro de usuario la diferencia no existe, y decirlo evita que el
    cajero la busque en el papel. */
 .corte-nota {
@@ -506,7 +506,7 @@
 }
 
 /* =========================================================================
-   HISTORIAL DE CAJA — tabla de sesiones
+   HISTORIAL DE CAJA - tabla de sesiones
    =========================================================================
    Reemplaza el "corte de caja", que eran filas de monto en vertical. Ahora cada
    turno es una FILA, y las filas se comparan entre sí de un vistazo: ese es el
@@ -738,7 +738,7 @@ tr.sesion-detalle-row td {
   white-space: nowrap;
 }
 
-/* "Actualizando…": aviso de que la petición del filtro de usuario está en
+/* "Actualizando...": aviso de que la petición del filtro de usuario está en
    vuelo. Va pegado al conteo de turnos, así que hace falta neutralizar el
    `margin-left: auto` de `.caja-conteo`, que lo empujaría al otro extremo. */
 .caja-actualizando {

@@ -1,58 +1,56 @@
+# Sistema de ventas (frontend)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
+Frontend Angular para la gestión del sistema de ventas. Consume la API del proyecto `Compras-Backend` bajo el prefijo `/api/local`.
 
-## Development server
+## Funcionalidad
 
-To start a local development server, run:
+- Inicio de sesión, recuperación y cambio de contraseña.
+- Cobro (POS): carrito, búsqueda por código de barras, pagos en efectivo y con tarjeta, emisión de ticket PDF y apertura y cierre de caja.
+- Productos y categorías con alta, edición, baja y reactivación.
+- Usuarios y roles con permisos por pantalla.
+- Compras a proveedores y consulta de márgenes.
+- Reportes de ventas y corte de caja con exportación a PDF y Excel.
+- Historial de ventas y perfil del usuario.
 
-```bash
-ng serve
+## Tecnologías
+
+- Angular 21 en modo standalone, TypeScript 5.9 y RxJS 7.
+- Angular Material para los componentes de interfaz.
+- Chart.js para las gráficas.
+- jsPDF y jspdf-autotable para tickets y reportes en PDF.
+- xlsx para la exportación a Excel.
+- Vitest y jsdom para las pruebas.
+- SSR habilitado y Zone.js para la detección de cambios.
+
+## Backend
+
+El backend es `Compras-Backend`, una API de Spring Boot. En desarrollo escucha en `http://localhost:8081/api` y esta aplicación usa `http://localhost:8081/api/local`. La URL de producción se define en `src/environments/environment-prod.ts`.
+
+La autenticación usa JWT. El token se guarda en `localStorage` y `AuthInterceptor` lo envía en cada petición. Las rutas protegidas comprueban el permiso correspondiente antes de cargar la pantalla.
+
+## Estructura
+
+- `src/app/core`: servicios HTTP, interfaces, guard de permisos, interceptor, pipe de paginación y utilidades.
+- `src/app/features`: pantallas de login, cobro, productos, categorías, usuarios, roles, compras, reportes, historial de ventas, perfil y vistas de elementos dados de baja.
+
+## Rutas
+
+La raíz `/` es el inicio de sesión. El resto de pantallas están en `/cobro`, `/perfil`, `/productos`, `/productos-desactivados`, `/categorias`, `/usuarios`, `/usuarios-desactivados`, `/roles`, `/compras`, `/reportes`, `/salehistory`, `/forgot-password` y `/reset-password`.
+
+## Ejecutar el proyecto
+
+Requiere Node.js y npm.
+
+```
+npm install
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación queda disponible en `http://localhost:4200`. El backend debe estar en ejecución para que las pantallas carguen datos.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+npm run build
+npm test
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+`npm run build` genera los archivos de producción en `dist/` y `npm test` ejecuta las pruebas con Vitest.

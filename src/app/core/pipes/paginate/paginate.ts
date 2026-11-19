@@ -24,7 +24,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'paginate', standalone: true })
 export class PaginatePipe implements PipeTransform {
   transform<T>(items: T[] | null | undefined, page: number, pageSize: number): T[] {
-    // Lista vacia o nula → se devuelve tal cual (evita errores).
+    // Lista vacia o nula : se devuelve tal cual (evita errores).
     if (!items?.length) {
       return items ?? [];
     }

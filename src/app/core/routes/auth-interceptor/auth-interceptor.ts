@@ -8,7 +8,7 @@ import { safeGetItem, safeRemoveItem } from '../../utils/storage-utils';
 // Interceptor que agrega el JWT a cada request y maneja la expiracion de sesion.
 //
 // 1) Authorization: read del token con helper seguro (no peta en SSR).
-// 2) Respuesta 401 (token expirado/invalido) → se limpia la sesion local y se
+// 2) Respuesta 401 (token expirado/invalido) : se limpia la sesion local y se
 //    redirige a '/' (login). Es el cierre de sesion automatico que faltaba:
 //    antes un token vencido dejaba la app "logeada" mostrando errores sueltos.
 //
